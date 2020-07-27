@@ -1,0 +1,180 @@
+<!-- Made by John Praise 
+---------------------------------
+SECOND PROJECT SOLEARN PROJECT
+---------------------------------
+Started on 20 July 2020
+Finished on 23 July 2020
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3D Car [Pure CSS]</title>
+	<link rel="stylesheet" href="custom.css"> 
+</head>
+<body>
+ <div class="nav">3D Car [Pure CSS]</div>
+  <div id="view3d" class="view">
+   <div id="btn">
+    <div class="btn-l" onmousemove="ryadd();" onclick="ryadd();">&lt;</div>
+    <div class="btn-r" onmousemove="rysub();" onclick="rysub();">&gt;</div>
+    <div class="btn-u" onmousemove="rxsub();" onclick="rxsub();">&lt;</div>
+    <div class="btn-d" onmousemove="rxadd();" onclick="rxadd();">&gt;</div>
+  </div>
+<!-- 3D -->
+<div id="camx" class="camera">
+   <div id="camera-origin"></div> 
+    <div id="floor-top"></div> 
+    <div id="floor-bottom"></div> 
+    <div id="floor-front"></div> 
+    <div id="floor-back"></div>
+    <div id="floor-left"></div> 
+    <div id="floor-right"></div> 
+
+<div id="car">
+  <div class="body-low">
+    <div id="front" class="body-face"></div>
+    <div id="back" class="body-face"></div>
+    <div id="left" class="body-face"></div>
+    <div id="right" class="body-face"></div>
+    <div id="top" class="body-face"></div>
+    <div id="bottom" class="body-face"></div>
+    <div id="headlight-l" class="body-face"></div>
+    <div id="headlight-r" class="body-face"></div>
+    <div id="headlight-l2" class="body-face"></div>
+    <div id="headlight-r2" class="body-face"></div>
+    <div id="rearlight-l" class="body-face"></div>
+    <div id="rearlight-r" class="body-face"></div>
+    <div id="rearlight-l2" class="body-face"></div>
+    <div id="rearlight-r2" class="body-face"></div>
+  </div>
+  <div class="body-high">
+    <div id="back2" class="body-face"></div>
+    <div id="back3" class="body-face"></div>
+    <div id="back4" class="body-face"></div>
+    <div id="back5" class="body-face"></div>
+    <div id="back6" class="body-face"></div>
+    <div id="back7" class="body-face"></div>
+    <div id="back8" class="body-face"></div>
+    <div id="back9" class="body-face"></div>
+    <div id="left2" class="body-face"></div>
+    <div id="right2" class="body-face"></div>
+    <div id="win-left" class="body-face"></div>
+    <div id="win-right" class="body-face"></div>
+    <div id="win-left2" class="body-face"></div>
+    <div id="win-right2" class="body-face"></div>
+    <div id="win-left3" class="body-face"></div>
+    <div id="win-right3" class="body-face"></div>
+    <div id="win" class="body-face"></div>
+    <div id="top2" class="body-face"></div>
+    <div id="top3" class="body-face"></div>
+   </div>
+  <div id="t1" class="tire">
+    <div id="c-f" class="tire-face"></div>
+    <div id="c-b" class="tire-face"></div>
+     	<div id="s-1" class="tire-face"></div>
+      <div id="s-2" class="tire-face"></div>
+      <div id="s-3" class="tire-face"></div>
+      <div id="s-4" class="tire-face"></div>
+      <div id="s-5" class="tire-face"></div>
+      <div id="s-6" class="tire-face"></div>
+      <div id="s-7" class="tire-face"></div>
+      <div id="s-8" class="tire-face"></div>
+      <div id="s-9" class="tire-face"></div>
+      <div id="s-10" class="tire-face"></div>
+      <div id="s-11" class="tire-face"></div>
+      <div id="s-12" class="tire-face"></div>
+   </div>
+   <div class="rod">
+      <div id="r-1" class="rod-face"></div>
+      <div id="r-2" class="rod-face"></div>
+      <div id="r-3" class="rod-face"></div>
+      <div id="r-4" class="rod-face"></div>
+   </div>
+  <div id="t2" class="tire2">
+    <div id="c-f" class="tire-face" style="transform:translateX(-19px)translateZ(-30px)translateY(1px) !important;"></div>
+    <div id="c-b" class="tire-face" style="transform:translateX(-19px)translateZ(30px)translateY(1px) !important;"></div>
+      <div id="s-1" class="tire-face"></div>
+      <div id="s-2" class="tire-face"></div>
+      <div id="s-3" class="tire-face"></div>
+      <div id="s-4" class="tire-face"></div>
+      <div id="s-5" class="tire-face"></div>
+      <div id="s-6" class="tire-face"></div>
+      <div id="s-7" class="tire-face"></div>
+      <div id="s-8" class="tire-face"></div>
+      <div id="s-9" class="tire-face"></div>
+      <div id="s-10" class="tire-face"></div>
+      <div id="s-11" class="tire-face"></div>
+      <div id="s-12" class="tire-face"></div>
+   </div>
+   <div id="t3" class="tire3">
+    <div id="c-f" class="tire-face"></div>
+    <div id="c-b" class="tire-face"></div>
+      <div id="s-1" class="tire-face"></div>
+      <div id="s-2" class="tire-face"></div>
+      <div id="s-3" class="tire-face"></div>
+      <div id="s-4" class="tire-face"></div>
+      <div id="s-5" class="tire-face"></div>
+      <div id="s-6" class="tire-face"></div>
+      <div id="s-7" class="tire-face"></div>
+      <div id="s-8" class="tire-face"></div>
+      <div id="s-9" class="tire-face"></div>
+      <div id="s-10" class="tire-face"></div>
+      <div id="s-11" class="tire-face"></div>
+      <div id="s-12" class="tire-face"></div>
+   </div>
+   <div class="rod2">
+      <div id="r-1" class="rod-face"></div>
+      <div id="r-2" class="rod-face"></div>
+      <div id="r-3" class="rod-face"></div>
+      <div id="r-4" class="rod-face"></div>
+   </div>
+  <div id="t4" class="tire4">
+    <div id="c-f" class="tire-face" style="transform:translateX(-19px)translateZ(-30px)translateY(1px) !important;"></div>
+    <div id="c-b" class="tire-face" style="transform:translateX(-19px)translateZ(30px)translateY(1px) !important;"></div>
+        <div id="s-1" class="tire-face"></div>
+        <div id="s-2" class="tire-face"></div>
+        <div id="s-3" class="tire-face"></div>
+        <div id="s-4" class="tire-face"></div>
+        <div id="s-5" class="tire-face"></div>
+        <div id="s-6" class="tire-face"></div>
+        <div id="s-7" class="tire-face"></div>
+        <div id="s-8" class="tire-face"></div>
+        <div id="s-9" class="tire-face"></div>
+        <div id="s-10" class="tire-face"></div>
+        <div id="s-11" class="tire-face"></div>
+        <div id="s-12" class="tire-face"></div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- 2D -->
+   <div class="controls">
+    <div class="con1">
+   	  <span>Head Light :</span>
+      <input type="radio" id="on" name="hl" checked onclick="hl();">
+      <label for="on">On</label>
+      <input type="radio" id="off" name="hl" onclick="hl();">
+      <label for="off">Off</label>
+    </div>
+    <div class="con2">
+      <span>Move on Spot :</span>
+      <input type="radio" id="on2" name="move" onclick="m();">
+      <label for="on2">On</label>
+      <input type="radio" id="off2" name="move" checked onclick="m();">
+      <label for="off2">Off</label>
+    </div>
+    <div class="con3">
+      <span>Turn Tires :</span>
+      <input type="radio" id="l" name="turn" onclick="t();">
+      <label for="l">Left</label>
+      <input type="radio" id="r" name="turn"onclick="t();">
+      <label for="r">Right</label>
+    </div>
+   </div>
+  <script src="custom.js"></script>
+ </body>
+</html>
