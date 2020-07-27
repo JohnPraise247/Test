@@ -7,7 +7,9 @@ body{
   background:url("../bg/bg-1.jpg");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   transition: ease-in .25s;
+  -webkit-user-select: none;
 }
 
 .bg-1{
@@ -58,3 +60,4 @@ a:hover{
     color: #aaa !important;
     text-decoration: none;
 }
+
